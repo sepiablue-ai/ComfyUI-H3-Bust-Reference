@@ -4,6 +4,12 @@
 
 A ComfyUI node that selects one of six upper-body three-view reference images for MiniMax H3 Ref2VA and adds an English role definition to your prompt. The numbers 01–06 identify assets, not measured cup sizes. This is a discrete selector, not continuous interpolation. Results depend on the model, clothing, character reference and prompt.
 
+## Example
+
+[![Park-running example: first and last frame comparison](assets/comparison_park_run_first_last_2x6.png)](assets/comparison_park_run_first_last_2x6.png)
+
+First and last frames from the park-running example. Click the image to view it at full size.
+
 ## Installation
 
 Start with a ComfyUI installation that can already run a standard MiniMax H3 Ref2VA workflow. This node does not set up the full video-generation environment. The manual installation below does not depend on a ComfyUI-Manager listing.

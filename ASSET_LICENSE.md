@@ -14,3 +14,9 @@ Attribution is not required for use, modification, redistribution or commercial 
 - [OpenAI Terms of Use — Content](https://openai.com/policies/row-terms-of-use/)
 
 The root MIT license applies to the code, documentation and workflow JSON, not these PNG assets.
+
+## 作例画像 / Example output
+
+`assets/comparison_park_run_first_last_2x6.png` は生成結果を紹介する作例です。上記の三面図6枚に対するCC0およびコード用MITの対象外です。生成モデル等の条件については [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) を参照してください。
+
+`assets/comparison_park_run_first_last_2x6.png` illustrates generated output. It is excluded from the CC0 dedication for the six reference images and the MIT license for the code. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the applicable model terms.
