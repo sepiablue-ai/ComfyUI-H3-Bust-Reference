@@ -4,6 +4,8 @@
 
 A ComfyUI node that selects one of six upper-body three-view reference images for MiniMax H3 Ref2VA and adds an English role definition to your prompt. The numbers 01–06 identify assets, not measured cup sizes. This is a discrete selector, not continuous interpolation. Results depend on the model, clothing, character reference and prompt.
 
+> Author: Kamimoto (かみもと) | Quick results on **[X (@sep_is_heim)](https://x.com/sep_is_heim)**, write-ups (Japanese) on **[note](https://note.com/sepiablue)** ([article index](https://note.com/sepiablue/n/n8e612c619a3e)).
+
 ## Example
 
 [![Park-running example: first and last frame comparison](assets/comparison_park_run_first_last_2x6.png)](assets/comparison_park_run_first_last_2x6.png)
@@ -89,6 +91,21 @@ Configuration was reviewed against local ComfyUI 0.36.0 and KJNodes 1.5.2; these
 The test selected a local character image and LoRA path; users must select their own image and installed models in the distributed workflow. Other operating systems, clean installations and browser interaction with the distributed JSON remain untested. Assess the visible proportion difference and visual quality by watching the outputs.
 
 Run `python -m unittest -q test_nodes.py` using the ComfyUI Python environment. Tests do not generate videos or use the GPU.
+
+## Author and related repositories
+
+I'm Kamimoto (かみもと). I measure and publish MiniMax H3 and ComfyUI speed-ups and VRAM reductions on an RTX 4070 12 GB.
+
+- X: [@sep_is_heim](https://x.com/sep_is_heim) — quick results with step counts, seconds and speed-ups
+- note: [かみもと｜ローカルAI生成](https://note.com/sepiablue) — setup guides and measured write-ups in Japanese ([article index](https://note.com/sepiablue/n/n8e612c619a3e))
+- [Sayaka Benchmark](https://sayakabenchmark.pages.dev/) — speed and quality comparison of H3 workflows
+
+| Repository | What it does |
+|---|---|
+| [ComfyUI-H3-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-X2-Stream) | INT8 X2 VAE and asynchronous NVENC saving; 5 s 1088×1920 video with audio in about 60 s |
+| [ComfyUI-H3-LBH-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-LBH-X2-Stream) | 3 low-resolution steps + 1 high-resolution step; about 25% faster for 14 s video |
+| [ComfyUI-H3-AudioFirst-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-AudioFirst-X2-Stream) | Audio-first two-pass generation that reduces the metallic voice |
+| [ComfyUI-MiniMax-H3-W4A4-VSA](https://github.com/sepiablue-ai/ComfyUI-MiniMax-H3-W4A4-VSA) | Ref2VA acceleration with FC1 W4A4 and Streaming VSA |
 
 ## Licensing
 

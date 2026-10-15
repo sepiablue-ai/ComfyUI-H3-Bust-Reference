@@ -4,6 +4,8 @@
 
 MiniMax H3 Ref2VA向けの三面図参照画像セレクターです。上半身の参照画像6種類（01〜06）を選び、その役割を説明する英文をプロンプトに追加します。番号は素材の選択用で、実際のカップサイズや連続的な数値制御を意味しません。結果はモデル、衣装、キャラクター画像、プロンプトに依存します。
 
+> 作者：かみもと（Kamimoto）｜検証結果の速報は **[X（@sep_is_heim）](https://x.com/sep_is_heim)**、解説記事は **[note](https://note.com/sepiablue)**（[記事INDEX](https://note.com/sepiablue/n/n8e612c619a3e)）で公開しています。
+
 ## 作例
 
 [![公園を走る作例の開始・終了フレーム比較](assets/comparison_park_run_first_last_2x6.png)](assets/comparison_park_run_first_last_2x6.png)
@@ -89,6 +91,21 @@ H3 Bust Reference Selector.PROMPT → H3 Ref2VA.prompt
 検証では自分のキャラクター画像とローカルのLoRA配置を指定しました。配布版では利用者が画像・モデルを選択する必要があります。別OS、クリーンインストール環境、配布JSONのブラウザー操作は未検証です。生成結果の体型差・品質は利用者が映像を見て判断してください。
 
 開発用テストはComfyUIと同じPythonで `python -m unittest -q test_nodes.py` を実行します。GPU生成は行いません。
+
+## 作者・関連リポジトリ
+
+かみもと（Kamimoto）です。RTX 4070 12GBで、MiniMax H3とComfyUIの高速化・省VRAM化を実測しながら公開しています。
+
+- X：[@sep_is_heim](https://x.com/sep_is_heim) — step数・秒数・短縮率などの検証速報
+- note：[かみもと｜ローカルAI生成](https://note.com/sepiablue) — 導入方法と実測の解説記事（[記事INDEX](https://note.com/sepiablue/n/n8e612c619a3e)）
+- [さやかベンチマーク](https://sayakabenchmark.pages.dev/) — H3ワークフローの速度・画質比較
+
+| リポジトリ | 内容 |
+|---|---|
+| [ComfyUI-H3-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-X2-Stream) | X2 VAEのINT8化と非同期NVENC保存。1088×1920の音声付き5秒動画を約60秒で生成 |
+| [ComfyUI-H3-LBH-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-LBH-X2-Stream) | 低解像度3step＋高解像度1step。14秒動画で約25%短縮 |
+| [ComfyUI-H3-AudioFirst-X2-Stream](https://github.com/sepiablue-ai/ComfyUI-H3-AudioFirst-X2-Stream) | 音声を先に作って固定し、金属的な響きを抑える2パス生成 |
+| [ComfyUI-MiniMax-H3-W4A4-VSA](https://github.com/sepiablue-ai/ComfyUI-MiniMax-H3-W4A4-VSA) | Ref2VAの高速化（FC1 W4A4、Streaming VSA） |
 
 ## ライセンス
 
